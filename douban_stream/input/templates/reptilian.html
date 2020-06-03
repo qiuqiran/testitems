@@ -1,0 +1,441 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://v4.bootcss.com/favicon.ico">
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://v4.bootcss.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://v4.bootcss.com/docs/4.0/examples/dashboard/dashboard.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">蛇口没有雨天</a>
+      <!--<input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">-->
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+          <a class="nav-link" href="/logout/">{{user}} Sign out</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="/reptilian/">
+                  <span data-feather="home"></span>
+                  豆瓣爬虫<span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/api_page/">
+                  <span data-feather="file"></span>
+                  接口文档
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/film/">
+                  <span data-feather="shopping-cart"></span>
+                  电影列表
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="users"></span>
+                  Customers
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="bar-chart-2"></span>
+                  Reports
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="layers"></span>
+                  Integrations
+                </a>
+              </li>
+            </ul>
+
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+              <span>Saved reports</span>
+              <a class="d-flex align-items-center text-muted" href="#">
+                <span data-feather="plus-circle"></span>
+              </a>
+            </h6>
+            <ul class="nav flex-column mb-2">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Current month
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Last quarter
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Social engagement
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Year-end sale
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+
+          <div class="container">
+
+              <h1>豆瓣最新电影信息</h1>
+              <p class="lead">此页面用于获取最新豆瓣电影列表名称、评分、id等信息。</p>
+
+              <h3>电影列表</h3>
+              <p>正在热映的电影列表，由豆瓣提供。</p>
+              <div class="row">
+                <div class="col-md-3 table-bordered table-success">名称</div>
+                <div class="col-md-3 table-bordered table-success">评分</div>
+                <div class="col-md-3 table-bordered table-success">id</div>
+                <div class="col-md-3 table-bordered table-success">操作</div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-3 table-bordered">{{movies.0}}</div>
+                <div class="col-md-3 table-bordered">{{rating.0}}</div>
+                <div class="col-md-3 table-bordered">{{id.0}}</div>
+                <div class="col-md-3 table-bordered">
+                  <a href="/crawl_save/{{id.0}}">保存</a>
+                </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-md-3 table-bordered">{{movies.1}}</div>
+                  <div class="col-md-3 table-bordered">{{rating.1}}</div>
+                  <div class="col-md-3 table-bordered">{{id.1}}</div>
+                  <div class="col-md-3 table-bordered">
+                    <a href="/crawl_save/{{id.1}}">保存</a>
+                  </div>
+                </div>
+
+              <div class="row">
+                    <div class="col-md-3 table-bordered">{{movies.2}}</div>
+                    <div class="col-md-3 table-bordered">{{rating.2}}</div>
+                    <div class="col-md-3 table-bordered">{{id.2}}</div>
+                    <div class="col-md-3 table-bordered">
+                      <a href="/crawl_save/{{id.2}}">保存</a>
+                    </div>
+                  </div>
+              <div class="row">
+                    <div class="col-md-3 table-bordered">{{movies.3}}</div>
+                    <div class="col-md-3 table-bordered">{{rating.3}}</div>
+                    <div class="col-md-3 table-bordered">{{id.3}}</div>
+                    <div class="col-md-3 table-bordered">
+                      <a href="/crawl_save/{{id.3}}">保存</a>
+                    </div>
+                  </div>
+              <div class="row">
+                    <div class="col-md-3 table-bordered">{{movies.4}}</div>
+                    <div class="col-md-3 table-bordered">{{rating.4}}</div>
+                    <div class="col-md-3 table-bordered">{{id.4}}</div>
+                    <div class="col-md-3 table-bordered">
+                      <a href="/crawl_save/{{id.4}}">保存</a>
+                    </div>
+                  </div>
+              <div class="row">
+                    <div class="col-md-3 table-bordered">{{movies.5}}</div>
+                    <div class="col-md-3 table-bordered">{{rating.5}}</div>
+                    <div class="col-md-3 table-bordered">{{id.5}}</div>
+                    <div class="col-md-3 table-bordered">
+                      <a href="/crawl_save/{{id.5}}">保存</a>
+                    </div>
+                  </div>
+              <div class="row">
+                    <div class="col-md-3 table-bordered">{{movies.6}}</div>
+                    <div class="col-md-3 table-bordered">{{rating.6}}</div>
+                    <div class="col-md-3 table-bordered">{{id.6}}</div>
+                    <div class="col-md-3 table-bordered">
+                      <a href="/crawl_save/{{id.6}}">保存</a>
+                    </div>
+                  </div>
+
+              <div class="row">
+                    <div class="col-md-3 table-bordered">{{movies.7}}</div>
+                    <div class="col-md-3 table-bordered">{{rating.7}}</div>
+                    <div class="col-md-3 table-bordered">{{id.7}}</div>
+                    <div class="col-md-3 table-bordered">
+                      <a href="/crawl_save/{{id.7}}">保存</a>
+                    </div>
+                  </div>
+
+              <div class="row">
+                    <div class="col-md-3 table-bordered">{{movies.8}}</div>
+                    <div class="col-md-3 table-bordered">{{rating.8}}</div>
+                    <div class="col-md-3 table-bordered">{{id.8}}</div>
+                    <div class="col-md-3 table-bordered">
+                      <a href="/crawl_save/{{id.8}}">保存</a>
+                    </div>
+                  </div>
+
+              <div class="row">
+                    <div class="col-md-3 table-bordered">{{movies.9}}</div>
+                    <div class="col-md-3 table-bordered">{{rating.9}}</div>
+                    <div class="col-md-3 table-bordered">{{id.9}}</div>
+                    <div class="col-md-3 table-bordered">
+                      <a href="/crawl_save/{{id.9}}">保存</a>
+                    </div>
+                  </div>
+
+              <div class="row">
+                    <div class="col-md-3 table-bordered">{{movies.10}}</div>
+                    <div class="col-md-3 table-bordered">{{rating.10}}</div>
+                    <div class="col-md-3 table-bordered">{{id.10}}</div>
+                    <div class="col-md-3 table-bordered">
+                      <a href="/crawl_save/{{id.10}}">保存</a>
+                    </div>
+                  </div>
+
+              <div class="row">
+                    <div class="col-md-3 table-bordered">{{movies.11}}</div>
+                    <div class="col-md-3 table-bordered">{{rating.11}}</div>
+                    <div class="col-md-3 table-bordered">{{id.11}}</div>
+                    <div class="col-md-3 table-bordered">
+                      <a href="/crawl_save/{{id.11}}">保存</a>
+                    </div>
+                  </div>
+
+              <div class="row">
+                    <div class="col-md-3 table-bordered">{{movies.12}}</div>
+                    <div class="col-md-3 table-bordered">{{rating.12}}</div>
+                    <div class="col-md-3 table-bordered">{{id.12}}</div>
+                    <div class="col-md-3 table-bordered">
+                      <a href="/crawl_save/{{id.12}}">保存</a>
+                    </div>
+                  </div>
+
+              <div class="row">
+                    <div class="col-md-3 table-bordered">{{movies.13}}</div>
+                    <div class="col-md-3 table-bordered">{{rating.13}}</div>
+                    <div class="col-md-3 table-bordered">{{id.13}}</div>
+                    <div class="col-md-3 table-bordered">
+                      <a href="/crawl_save/{{id.13}}">保存</a>
+                    </div>
+                  </div>
+              <div class="row">
+                    <div class="col-md-3 table-bordered">{{movies.14}}</div>
+                    <div class="col-md-3 table-bordered">{{rating.14}}</div>
+                    <div class="col-md-3 table-bordered">{{id.14}}</div>
+                    <div class="col-md-3 table-bordered">
+                      <a href="/crawl_save/{{id.14}}">保存</a>
+                    </div>
+                  </div>
+
+              <div class="row">
+                    <div class="col-md-3 table-bordered">{{movies.15}}</div>
+                    <div class="col-md-3 table-bordered">{{rating.15}}</div>
+                    <div class="col-md-3 table-bordered">{{id.15}}</div>
+                    <div class="col-md-3 table-bordered">
+                      <a href="/crawl_save/{{id.15}}">保存</a>
+                    </div>
+                  </div>
+
+              <div class="row">
+                    <div class="col-md-3 table-bordered">{{movies.16}}</div>
+                    <div class="col-md-3 table-bordered">{{rating.16}}</div>
+                    <div class="col-md-3 table-bordered">{{id.16}}</div>
+                    <div class="col-md-3 table-bordered">
+                      <a href="/crawl_save/{{id.16}}">保存</a>
+                    </div>
+                  </div>
+
+              <div class="row">
+                    <div class="col-md-3 table-bordered">{{movies.17}}</div>
+                    <div class="col-md-3 table-bordered">{{rating.17}}</div>
+                    <div class="col-md-3 table-bordered">{{id.17}}</div>
+                    <div class="col-md-3 table-bordered">
+                      <a href="/crawl_save/{{id.17}}">保存</a>
+                    </div>
+                  </div>
+
+              <div class="row">
+                    <div class="col-md-3 table-bordered">{{movies.18}}</div>
+                    <div class="col-md-3 table-bordered">{{rating.18}}</div>
+                    <div class="col-md-3 table-bordered">{{id.18}}</div>
+                    <div class="col-md-3 table-bordered">
+                      <a href="/crawl_save/{{id.18}}">保存</a>
+                    </div>
+                  </div>
+
+
+              <br>
+
+
+              <!--<h3>一周口碑</h3>-->
+              <!--<p>一周口碑的电影列表，由豆瓣提供。</p>-->
+              <!--<div class="row ">-->
+                <!--<div class="col-md-8 table-bordered table-success">名称</div>-->
+                <!--<div class="col-md-4 table-bordered table-success">操作</div>-->
+              <!--</div>-->
+              <!--{% for j in week_top%}-->
+              <!--<div class="row">-->
+                <!--<div class="col-md-8 table-bordered">{{j}}</div>-->
+                <!--<div class="col-md-4 table-bordered">-->
+                  <!--<a href="#">保存</a>-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--{% endfor %}-->
+              <!--<br>-->
+              <!--<h3>北美票房</h3>-->
+              <!--<p>一周北美票房最高排名的电影列表，由豆瓣提供。</p>-->
+              <!--<div class="row">-->
+                <!--<div class="col-md-8 table-bordered table-success">名称</div>-->
+                <!--<div class="col-md-4 table-bordered table-success">操作</div>-->
+              <!--</div>-->
+              <!--{% for j in na_top%}-->
+              <!--<div class="row">-->
+                <!--<div class="col-md-8 table-bordered">{{j}}</div>-->
+                <!--<div class="col-md-4 table-bordered">-->
+                  <!--<a href="#">保存</a>-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--{% endfor %}-->
+              <!--<br>-->
+
+
+              <!--<h3>Two columns</h3>-->
+              <!--<p>Get two columns <strong>starting at desktops and scaling to large desktops</strong>.</p>-->
+              <!--<div class="row">-->
+                <!--<div class="col-md-8 table-bordered">.col-md-8</div>-->
+                <!--<div class="col-md-4 table-bordered">.col-md-4</div>-->
+              <!--</div>-->
+
+              <!--<h3>Full width, single column</h3>-->
+              <!--<p class="text-warning">No grid classes are necessary for full-width elements.</p>-->
+
+              <!--<hr>-->
+
+              <!--<h3>Two columns with two nested columns</h3>-->
+              <!--<p>Per the documentation, nesting is easy—just put a row of columns within an existing column. This gives you two columns <strong>starting at desktops and scaling to large desktops</strong>, with another two (equal widths) within the larger column.</p>-->
+              <!--<p>At mobile device sizes, tablets and down, these columns and their nested columns will stack.</p>-->
+              <!--<div class="row">-->
+                <!--<div class="col-md-8">-->
+                  <!--.col-md-8-->
+                  <!--<div class="row">-->
+                    <!--<div class="col-md-6">.col-md-6</div>-->
+                    <!--<div class="col-md-6">.col-md-6</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-md-4">.col-md-4</div>-->
+              <!--</div>-->
+
+              <!--<hr>-->
+
+              <!--<h3>Mixed: mobile and desktop</h3>-->
+              <!--<p>The Bootstrap v4 grid system has five tiers of classes: xs (extra small), sm (small), md (medium), lg (large), and xl (extra large). You can use nearly any combination of these classes to create more dynamic and flexible layouts.</p>-->
+              <!--<p>Each tier of classes scales up, meaning if you plan on setting the same widths for xs and sm, you only need to specify xs.</p>-->
+              <!--<div class="row">-->
+                <!--<div class="col-12 col-md-8">.col-12 .col-md-8</div>-->
+                <!--<div class="col-6 col-md-4">.col-6 .col-md-4</div>-->
+              <!--</div>-->
+              <!--<div class="row">-->
+                <!--<div class="col-6 col-md-4">.col-6 .col-md-4</div>-->
+                <!--<div class="col-6 col-md-4">.col-6 .col-md-4</div>-->
+                <!--<div class="col-6 col-md-4">.col-6 .col-md-4</div>-->
+              <!--</div>-->
+              <!--<div class="row">-->
+                <!--<div class="col-6">.col-6</div>-->
+                <!--<div class="col-6">.col-6</div>-->
+              <!--</div>-->
+
+              <!--<hr>-->
+
+              <!--<h3>Mixed: mobile, tablet, and desktop</h3>-->
+              <!--<p></p>-->
+              <!--<div class="row">-->
+                <!--<div class="col-12 col-sm-6 col-lg-8">.col-12 .col-sm-6 .col-lg-8</div>-->
+                <!--<div class="col-6 col-lg-4">.col-6 .col-lg-4</div>-->
+              <!--</div>-->
+              <!--<div class="row">-->
+                <!--<div class="col-6 col-sm-4">.col-6 .col-sm-4</div>-->
+                <!--<div class="col-6 col-sm-4">.col-6 .col-sm-4</div>-->
+                <!--<div class="col-6 col-sm-4">.col-6 .col-sm-4</div>-->
+              <!--</div>-->
+
+            </div> <!-- /container -->
+
+
+
+
+        </main>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="https://v4.bootcss.com/assets/js/vendor/popper.min.js"></script>
+    <script src="https://v4.bootcss.com/dist/js/bootstrap.min.js"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+
+    <!-- Graphs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script>
+      var ctx = document.getElementById("myChart");
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          datasets: [{
+            data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+            lineTension: 0,
+            backgroundColor: 'transparent',
+            borderColor: '#007bff',
+            borderWidth: 4,
+            pointBackgroundColor: '#007bff'
+          }]
+        },
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: false
+              }
+            }]
+          },
+          legend: {
+            display: false,
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

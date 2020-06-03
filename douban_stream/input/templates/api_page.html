@@ -1,0 +1,279 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://v4.bootcss.com/favicon.ico">
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://v4.bootcss.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://v4.bootcss.com/docs/4.0/examples/dashboard/dashboard.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">蛇口没有雨天</a>
+      <!--<input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">-->
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+          <a class="nav-link" href="/logout/">{{user}} Sign out</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link " href="/reptilian/">
+                  <span data-feather="home"></span>
+                  豆瓣爬虫 <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/api_page/">
+                  <span data-feather="file"></span>
+                  接口文档
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/film/">
+                  <span data-feather="shopping-cart"></span>
+                  电影列表
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="users"></span>
+                  Customers
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="bar-chart-2"></span>
+                  Reports
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="layers"></span>
+                  Integrations
+                </a>
+              </li>
+            </ul>
+
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+              <span>Saved reports</span>
+              <a class="d-flex align-items-center text-muted" href="#">
+                <span data-feather="plus-circle"></span>
+              </a>
+            </h6>
+            <ul class="nav flex-column mb-2">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Current month
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Last quarter
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Social engagement
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Year-end sale
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+
+          <div class="container">
+
+              <h1>Bootstrap grid examples</h1>
+              <p class="lead">Basic grid layouts to get you familiar with building within the Bootstrap grid system.</p>
+
+              <h3>Five grid tiers</h3>
+              <p>There are five tiers to the Bootstrap grid system, one for each range of devices we support. Each tier starts at a minimum viewport size and automatically applies to the larger devices unless overridden.</p>
+
+              <div class="row">
+                <div class="col-4 table-info table-bordered">.col-4</div>
+                <div class="col-4 table-info table-bordered">.col-4</div>
+                <div class="col-4 table-info">.col-4</div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-4 table-success">.col-sm-4</div>
+                <div class="col-sm-4 table-success">.col-sm-4</div>
+                <div class="col-sm-4 table-success">.col-sm-4</div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4 table-bordered">.col-md-4</div>
+                <div class="col-md-4 table-bordered">.col-md-4</div>
+                <div class="col-md-4 table-bordered">.col-md-4</div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-4 table-bordered">.col-lg-4</div>
+                <div class="col-lg-4 table-bordered">.col-lg-4</div>
+                <div class="col-lg-4 table-bordered">.col-lg-4</div>
+              </div>
+
+              <div class="row">
+                <div class="col-xl-4">.col-xl-4</div>
+                <div class="col-xl-4">.col-xl-4</div>
+                <div class="col-xl-4">.col-xl-4</div>
+              </div>
+
+              <h3>Three equal columns</h3>
+              <p>Get three equal-width columns <strong>starting at desktops and scaling to large desktops</strong>. On mobile devices, tablets and below, the columns will automatically stack.</p>
+              <div class="row">
+                <div class="col-md-4">.col-md-4</div>
+                <div class="col-md-4">.col-md-4</div>
+                <div class="col-md-4">.col-md-4</div>
+              </div>
+
+              <h3>Three unequal columns</h3>
+              <p>Get three columns <strong>starting at desktops and scaling to large desktops</strong> of various widths. Remember, grid columns should add up to twelve for a single horizontal block. More than that, and columns start stacking no matter the viewport.</p>
+              <div class="row">
+                <div class="col-md-3">.col-md-3</div>
+                <div class="col-md-6">.col-md-6</div>
+                <div class="col-md-3">.col-md-3</div>
+              </div>
+
+              <h3>Two columns</h3>
+              <p>Get two columns <strong>starting at desktops and scaling to large desktops</strong>.</p>
+              <div class="row">
+                <div class="col-md-8 table-bordered">.col-md-8</div>
+                <div class="col-md-4 table-bordered">.col-md-4</div>
+              </div>
+
+              <h3>Full width, single column</h3>
+              <p class="text-warning">No grid classes are necessary for full-width elements.</p>
+
+              <hr>
+
+              <h3>Two columns with two nested columns</h3>
+              <p>Per the documentation, nesting is easy—just put a row of columns within an existing column. This gives you two columns <strong>starting at desktops and scaling to large desktops</strong>, with another two (equal widths) within the larger column.</p>
+              <p>At mobile device sizes, tablets and down, these columns and their nested columns will stack.</p>
+              <div class="row">
+                <div class="col-md-8">
+                  .col-md-8
+                  <div class="row">
+                    <div class="col-md-6">.col-md-6</div>
+                    <div class="col-md-6">.col-md-6</div>
+                  </div>
+                </div>
+                <div class="col-md-4">.col-md-4</div>
+              </div>
+
+              <hr>
+
+              <h3>Mixed: mobile and desktop</h3>
+              <p>The Bootstrap v4 grid system has five tiers of classes: xs (extra small), sm (small), md (medium), lg (large), and xl (extra large). You can use nearly any combination of these classes to create more dynamic and flexible layouts.</p>
+              <p>Each tier of classes scales up, meaning if you plan on setting the same widths for xs and sm, you only need to specify xs.</p>
+              <div class="row">
+                <div class="col-12 col-md-8">.col-12 .col-md-8</div>
+                <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+                <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+                <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+              </div>
+              <div class="row">
+                <div class="col-6">.col-6</div>
+                <div class="col-6">.col-6</div>
+              </div>
+
+              <hr>
+
+              <h3>Mixed: mobile, tablet, and desktop</h3>
+              <p></p>
+              <div class="row">
+                <div class="col-12 col-sm-6 col-lg-8">.col-12 .col-sm-6 .col-lg-8</div>
+                <div class="col-6 col-lg-4">.col-6 .col-lg-4</div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+                <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+                <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+              </div>
+
+            </div> <!-- /container -->
+
+
+
+
+        </main>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="https://v4.bootcss.com/assets/js/vendor/popper.min.js"></script>
+    <script src="https://v4.bootcss.com/dist/js/bootstrap.min.js"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+
+    <!-- Graphs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script>
+      var ctx = document.getElementById("myChart");
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          datasets: [{
+            data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+            lineTension: 0,
+            backgroundColor: 'transparent',
+            borderColor: '#007bff',
+            borderWidth: 4,
+            pointBackgroundColor: '#007bff'
+          }]
+        },
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: false
+              }
+            }]
+          },
+          legend: {
+            display: false,
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

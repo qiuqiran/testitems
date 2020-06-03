@@ -1,0 +1,107 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--<meta charset="utf-8">-->
+<!--<title>菜鸟教程(runoob.com)</title>-->
+<!--<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">-->
+<!--</script>-->
+
+<!--</head>-->
+<!--<body>-->
+
+<!--&lt;!&ndash;<button>发送一个 HTTP GET 请求并获取返回结果</button>&ndash;&gt;-->
+<!--<p id="demo">d这里</p>-->
+<!--<p id="demo1">d这里</p>-->
+
+<!--&lt;!&ndash;<p>该实例声明一个函数，函数调用时在 id="demo" 的元素上输出 "Hello World" 。</p>&ndash;&gt;-->
+
+<!--<script>-->
+<!--$(document).ready(function(){-->
+    <!--//请求接口-->
+    <!--$.get("/api/cover/",{mid:"16"},function(data,status){-->
+        <!--//赋值在对应的id上-->
+        <!--document.getElementById("demo").innerHTML = status;-->
+        <!--document.getElementById("demo1").innerHTML = data;-->
+
+
+    <!--});-->
+<!--});-->
+
+
+<!--&lt;!&ndash;&lt;!&ndash;一进来页面就请求接口&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;$.get("/api/cover/",{mid:"16"})&ndash;&gt;-->
+
+<!--</script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+$.getJSON('/api/cover/', function(data){
+        <!--alert(data.data[0].id);-->
+        <!--alert(data.data[0].realname);-->
+        <!--alert(data.data[0].short);-->
+        document.getElementById("demo_id").innerHTML = data.data[0].id;
+        document.getElementById("demo_realname").innerHTML = data.data[0].realname;
+        document.getElementById("demo_short").innerHTML = data.data[0].short;
+
+});
+</script>
+</head>
+
+<body>
+
+
+<main role="main" class="inner cover">
+<h1 id="demo_id" class="cover-heading">id:kew</h1>
+<h2 id="demo_realname" class="cover-heading">@wo就是你</h2>
+<p id="demo_short" class="lead">short:一场盛大的终结，即使之前不是漫威粉丝，此刻也不得不惊叹于这场十年布局的精妙和野心。本质上是升级综合版的《逆转未来》，但是看到一幕幕曾经惊艳到我们的场景出现，不由得心生感慨，也不禁会思考，如果我们拥有回到过去的能力，会对过去的自己和想见的人说些什么？又是否能改变什么？从这个角度来说，这部终局之战更像是一部人性之作，它在探寻人在面临失去后的选择与处境，责任的担当与传承，当然还有必不可少的牺牲精神，随着惊奇队长的加盟，女权精神也得到了更为明显的展现。到最后还是落得白茫茫大地真干净，从谁身上引出的传奇自然由谁结束，娜塔莎在提到因为超级英雄这份工作变得更好的真情流露，可能也是所有演员们的心声。毕竟这22部作品确实承载了太多意义。" </p>
+<p class="lead">
+  <a href="/o4/" class="btn btn-lg btn-secondary">下一条</a>
+</p>
+</main>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
